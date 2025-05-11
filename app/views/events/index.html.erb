@@ -1,0 +1,18 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Event Calendar</h1>
+    <%= link_to "➕ Add Event", new_event_path, class: "btn btn-primary" %>
+  </div>
+  <h1 class="mb-4">Event Calendar</h1>
+
+  <%= month_calendar events: @events do |date, events| %>
+    <div class="border p-2 rounded bg-light mb-2">
+      <strong><%= date.day %></strong>
+      <% events.each do |event| %>
+        <div>
+          <%= link_to event.title, event_path(event), class: "btn btn-sm btn-outline-primary my-1" %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

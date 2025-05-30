@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :events do
-    post 'join', to: 'event_joiners#create'
-    delete 'leave', to: 'event_joiners#destroy'
+    post 'join', to: 'event_joiners#join'
+    delete 'leave', to: 'event_joiners#leave'
   end
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

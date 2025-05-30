@@ -3,7 +3,6 @@
     <h1>Event Calendar</h1>
     <%= link_to "➕ Add Event", new_event_path, class: "btn btn-primary" %>
   </div>
-  <h1 class="mb-4">Event Calendar</h1>
 
   <%= month_calendar events: @events do |date, events| %>
     <div class="border p-2 rounded bg-light mb-2">
